@@ -73,10 +73,11 @@ var registerPass = urlLocal.searchParams.get("password__register");
 console.log(registerMail);
 console.log(registerPass);
 // Verificando digitação correta no cadastro.
-function verifyRegister() {
+function verifyRegister(e) {
     var emailR = document.getElementById("email__register").value;
     var passR = document.getElementById("password__register").value;
     var passC = document.getElementById("password__confirm").value;
+    var submit = false;
     if(emailR == ""){
         alert("Digite um e-mail.");
     }else if(emailR.indexOf("@")==-1 || emailR.indexOf(".")==-1){
@@ -89,6 +90,10 @@ function verifyRegister() {
         alert("As senhas precisam ser iguais.");
     }else{
         alert("Cadastro realizado com sucesso!");
+        submit = true;
+    }
+    if(submit === false) {
+        e.preventDefault();
     }
 }
 document.getElementById("submit__register").addEventListener("click", verifyRegister);
