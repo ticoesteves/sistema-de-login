@@ -129,7 +129,7 @@ footer {
     justify-content: right;
     align-items: center;
     flex-wrap: wrap;
-    padding: 30px;
+    padding: 10px 30px 30px 30px;
     color: var(--brightColor);
     background-color: var(--secundaryColor);
     border-radius: 20px;
