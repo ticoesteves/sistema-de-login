@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/animate.css">
+    <title>Sistema de Login - Tico Esteves</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="#">
+                    <img src="./assets/images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div id="header__menu">
+                <ul>
+                    <button id="login__button" onClick="openForm();">Login</button>
+                    <button id="register__button" onClick="openForm();">Cadastro</button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="login__sec">
+                <div id="content__login" class="animate__animated">
+                    <span><a href="" id="hide__login" onclick="closeForm();">cancelar</a></span>
+                    <form type="post" id="form__login" autocomplete="off">
+                        <fieldset>
+                            <legend>Login</legend>
+                            <div id="login__content">
+                                <label id="label__email" class="label__email animate__animated">Informe seu e-mail:</label>
+                                <input 
+                                    type="email" 
+                                    name="email__login" 
+                                    id="email__login" 
+                                    class="animate__animated" 
+                                    placeholder="Informe seu e-mail..." 
+                                    onfocus="this.value=''; showLabelMail();" 
+                                    onfocusOut="hideLabelMail();" 
+                                />
+                                <label id="label__pass" class="label__pass animate__animated">Informe sua senha:</label>
+                                <input 
+                                    type="password" 
+                                    name="password__login" 
+                                    id="password__login" 
+                                    class="animate__animated" 
+                                    placeholder="Informe sua senha..." 
+                                    onfocus="this.value=''; showLabelPass();" 
+                                    onfocusOut="hideLabelPass();" 
+                                />
+                            </div>
+                            <a href="#" id="submit__login" class="animate__animated">Entrar</a>
+                            <span>Não é registrado? <a href="#" onClick="showRegister();">Crie uma conta!</a></span>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+            <section id="register">
+                <div id="content__register" class="animate__animated">
+                    <span><a href="" id="hide__register" onclick="closeForm();">cancelar</a></span>
+                    <form id="form__register" autocomplete="off">
+                    <fieldset>
+                        <legend>Cadastro</legend>
+                        <div id="register__content">
+                            <label id="label__email__r" class="label__email animate__animated">Informe seu e-mail:</label>
+                            <input 
+                                type="email" 
+                                name="email__register" 
+                                id="email__register" 
+                                placeholder="Informe seu e-mail..." 
+                                required 
+                                onfocus="this.value=''; showLabelMailR();" 
+                                onfocusOut="hideLabelMailR();" 
+                            />
+                            <label id="label__pass__r" class="label__pass animate__animated">Informe sua senha:</label>
+                            <input 
+                                type="password" 
+                                name="password__register" 
+                                id="password__register" 
+                                placeholder="Informe sua senha..." 
+                                required 
+                                onfocus="this.value=''; showLabelPassR();" 
+                                onfocusOut="hideLabelPassR();" 
+                            />
+                            <label id="label__pass__rc" class="label__pass animate__animated">Confirme sua senha:</label>
+                            <input 
+                                type="password" 
+                                name="password__confirm" 
+                                id="password__confirm" 
+                                placeholder="Confirme sua senha..." 
+                                required 
+                                onfocus="this.value=''; showLabelPassRc();" 
+                                onfocusOut="hideLabelPassRc();" 
+                            />
+                        </div>
+                            <button id="submit__register" class="animate__animated">Cadastrar</button>
+                            <span>Já é registrado? <a href="#" onClick="showLogin();">Faça Login!</a></span>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <section id="description">
+            <div class="content">
+                <h3>Sistema</h3>
+                <h6>de</h6>
+                <h2>Login</h2>
+                <h6>Por:</h6>
+                <h5><a href="https://ticoesteves.github.io/portfolio/" target="_blank">Tico Esteves</a></h5>
+            </div>
+        </section>
+        <section id="login__panel">
+            <div class="content">
+                <h3>Login realizado com sucesso!</h3>
+                <a href="#" id="exit__panel" onclick="exitPanel();">Sair</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="copy">
+            &#169; Copyright Carlos Eduardo | Todos os direitos reservados.<br>
+            Desenvolvido por <a href="https://ticoesteves.github.io/portfolio/" target="_blank">Tico Esteves</a>
+        </div>
+    </footer>
+
+    
+    <script src="./assets/script.js"></script>
+</body>
+</html>
